@@ -13,7 +13,7 @@ The header uses the UPSA logo image from the [official UPSA website](https://ups
 
 ## 2. Configure authentication
 
-1. For a project that already has the earlier UPSA Find schema, run all SQL from [`supabase/auth-setup.sql`](./supabase/auth-setup.sql) in the Supabase SQL Editor. It adds account ownership to reports, restricts new reports to their signed-in author, and enforces the UPSA email domain on the server.
+1. For a project that already has the earlier UPSA Find schema, run all SQL from [`supabase/auth-setup.sql`](./supabase/auth-setup.sql) in the Supabase SQL Editor. It adds account ownership and returned status, restricts report creation and management to the signed-in author, and enforces the UPSA email domain on the server. Older reports without an owner remain visible but cannot be managed through **My reports**.
 2. In Supabase **Authentication → URL Configuration**, set the Site URL to the published GitHub Pages URL and add that URL to the allowed redirect URLs. For local development, also allow your local XAMPP address.
 3. Keep email confirmation enabled so new accounts must confirm their UPSA inbox before signing in.
 
@@ -38,6 +38,8 @@ Serve this folder using a local web server (for example, XAMPP) rather than open
 ## Public information
 
 Anyone can read listings, but only signed-in accounts using `@upsamail.edu.gh` can create new reports. Reporters' names and UPSA email addresses are visible to everyone. Do not post sensitive ID details. Add moderation and abuse protection before using this as an official university service.
+
+Signed-in students can use **My reports** to edit or delete their own listings, mark an item returned, or reopen a report. Returned listings remain visible with a returned label and no contact link; they are excluded from the active-item counts. These controls require applying the updated `supabase/auth-setup.sql` migration to an existing project (or using the current `supabase/schema.sql` for a new project).
 
 ## Returning an item safely
 
