@@ -39,11 +39,7 @@
       gap: 20px;
     }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-mark {
-      width: 42px; height: 42px; display: grid; place-items: center;
-      border-radius: 13px; background: var(--gold); color: var(--navy);
-      font-weight: 900; letter-spacing: -.05em;
-    }
+    .brand-logo { display: block; width: 112px; height: 44px; border-radius: 5px; background: white; object-fit: contain; }
     .brand-name { font-size: 17px; font-weight: 800; letter-spacing: -.02em; }
     .brand-sub { display: block; margin-top: 2px; color: #c8d5ec; font-size: 11px; font-weight: 500; }
     .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -199,6 +195,7 @@
       .nav-links a { display: none; }
       .nav-cta { padding: 9px 11px; font-size: 11px; }
       .account-label { display: none; }
+      .brand-logo { width: 86px; height: 38px; }
       .brand-name { font-size: 15px; }
       .hero-inner { padding: 40px 0; }
       h1 { font-size: 39px; }
@@ -226,7 +223,7 @@
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#" aria-label="UPSA Find home">
-        <span class="brand-mark" aria-hidden="true">UF</span>
+        <img class="brand-logo" src="upsa-logo.png" alt="University of Professional Studies, Accra logo">
         <span class="brand-name">UPSA Find<span class="brand-sub">University of Professional Studies, Accra</span></span>
       </a>
       <div class="nav-links">

@@ -2,6 +2,8 @@
 
 UPSA Find is a static site for GitHub Pages. It uses Supabase for the shared listings database, so reports submitted from one device are available to other visitors.
 
+The header uses the UPSA logo image from the [official UPSA website](https://upsa.edu.gh/wp-content/uploads/2023/03/upsa-logo-new.png). Keep `upsa-logo.png` alongside `index.html` when publishing.
+
 ## 1. Create the Supabase database
 
 1. Sign in to [Supabase](https://supabase.com/) and create a project.
